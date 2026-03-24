@@ -1,0 +1,27 @@
+FROM python:3.8
+COPY ./requirements.txt /opt/cpn/time_compare/requirements.txt
+RUN pip install -r /opt/cpn/time_compare/requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+
+ADD ./distance.csv /opt/cpn/time_compare/distance.csv
+ADD ./game.py /opt/cpn/time_compare/game.py
+ADD ./LyDROO_TTT_queue_compare.py /opt/cpn/time_compare/LyDROO_TTT_queue_compare.py
+ADD ./LyDROO.py /opt/cpn/time_compare/LyDROO.py
+ADD ./memoryTF2conv_3_queue.py /opt/cpn/time_compare/memoryTF2conv_3_queue.py
+ADD ./ResourceAllocation_3_queue.py /opt/cpn/time_compare/ResourceAllocation_3_queue.py
+ADD ./submit.csv /opt/cpn/time_compare/submit.csv
+ADD ./VM_price.csv /opt/cpn/time_compare/VM_price.csv
+
+RUN chmod 777 /opt/cpn/time_compare/distance.csv
+RUN chmod 777 /opt/cpn/time_compare/game.py
+RUN chmod 777 /opt/cpn/time_compare/LyDROO_TTT_queue_compare.py
+RUN chmod 777 /opt/cpn/time_compare/LyDROO.py
+RUN chmod 777 /opt/cpn/time_compare/memoryTF2conv_3_queue.py
+RUN chmod 777 /opt/cpn/time_compare/ResourceAllocation_3_queue.py
+RUN chmod 777 /opt/cpn/time_compare/submit.csv
+RUN chmod 777 /opt/cpn/time_compare/VM_price.csv
+
+# ADD ./其它需要脚本文件 /opt/cpn/time_compare/其他需要脚本文件
+ENTRYPOINT ["/opt/cpn/time_compare/LyDROO.py"]
+
+#docker命令:docker run -e PARAMETER_NAME=value docker_imagedockerfile/docker_files_template/mydockerfile.txt

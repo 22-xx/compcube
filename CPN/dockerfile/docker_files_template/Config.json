@@ -1,0 +1,11 @@
+{
+  "input_path": "/input",
+  "output_path": "/output",
+  "answer_path": "/answer",
+  "zipfile_path": "/user-data",
+  "codefile_path": "/user-data/code/main.py",
+  "zip_path": "/opt/competition/unzip.sh",
+  "judge_path": "/opt/competition/judge.py",
+  "log_path": "/log/log.log",
+  "url": "http://172.29.214.135:8080/record/update"
+}

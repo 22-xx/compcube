@@ -1,0 +1,35 @@
+FROM python:3.8
+COPY ./requirements.txt /opt/cpn/con_factor_enegry/requirements.txt
+RUN pip install -r /opt/cpn/con_factor_enegry/requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+
+ADD ./A2SC_constrain_energy.py /opt/cpn/con_factor_enegry/A2SC_constrain_energy.py
+ADD ./A2SC_constrain_time.py /opt/cpn/con_factor_enegry/A2SC_constrain_time.py
+ADD ./A2SC-Plot-3D-two-energy.py /opt/cpn/con_factor_enegry/A2SC-Plot-3D-two-energy.py
+ADD ./A2SC-Plot-3D-two-time.py /opt/cpn/con_factor_enegry/A2SC-Plot-3D-two-time.py
+ADD ./distance.csv /opt/cpn/con_factor_enegry/distance.csv
+ADD ./game.py /opt/cpn/con_factor_enegry/game.py
+ADD ./main-SLA-cons-energy.py /opt/cpn/con_factor_enegry/main-SLA-cons-energy.py
+ADD ./main-SLA-cons-time.py /opt/cpn/con_factor_enegry/main-SLA-cons-time.py
+ADD ./memoryTF2conv_3_queue.py /opt/cpn/con_factor_enegry/memoryTF2conv_3_queue.py
+ADD ./ResourceAllocation_3_queue.py /opt/cpn/con_factor_enegry/ResourceAllocation_3_queue.py
+ADD ./submit.csv /opt/cpn/con_factor_enegry/submit.csv
+ADD ./VM_price.csv /opt/cpn/con_factor_enegry/VM_price.csv
+
+RUN chmod 777 /opt/cpn/con_factor_enegry/A2SC_constrain_energy.py
+RUN chmod 777 /opt/cpn/con_factor_enegry/A2SC_constrain_time.py
+RUN chmod 777 /opt/cpn/con_factor_enegry/A2SC-Plot-3D-two-energy.py
+RUN chmod 777 /opt/cpn/con_factor_enegry/A2SC-Plot-3D-two-time.py
+RUN chmod 777 /opt/cpn/con_factor_enegry/distance.csv
+RUN chmod 777 /opt/cpn/con_factor_enegry/game.py
+RUN chmod 777 /opt/cpn/con_factor_enegry/main-SLA-cons-energy.py
+RUN chmod 777 /opt/cpn/con_factor_enegry/main-SLA-cons-time.py
+RUN chmod 777 /opt/cpn/con_factor_enegry/memoryTF2conv_3_queue.py
+RUN chmod 777 /opt/cpn/con_factor_enegry/ResourceAllocation_3_queue.py
+RUN chmod 777 /opt/cpn/con_factor_enegry/submit.csv
+RUN chmod 777 /opt/cpn/con_factor_enegry/VM_price.csv
+
+# ADD ./其它需要脚本文件 /opt/cpn/con_factor_enegry/其他需要脚本文件
+ENTRYPOINT ["/opt/cpn/con_factor_enegry/main-SLA-cons-energy.py"]
+
+#docker命令:docker run -e PARAMETER_NAME=value docker_imagedockerfile/docker_files_template/mydockerfile.txt

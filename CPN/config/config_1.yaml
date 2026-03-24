@@ -1,0 +1,24 @@
+app:
+  env: local
+  host: 0.0.0.0
+  port: 8000
+  app_name: LadderCompetitionPlatform
+  app_url: http://127.0.0.1:8000
+
+database:
+  name: competition_for_debug
+  host: mongodb://101.43.190.154:27017
+  username: admin
+  password: 1234asdF
+
+file_path:
+  root_path: ./data
+  log_path: ./data/logs/serverLogs
+  log_name: Log
+  file_path: ./data/files
+
+docker_path:
+  input_path: /input
+  user_path: /user-data
+  output_path: /output
+  log_path: /log
