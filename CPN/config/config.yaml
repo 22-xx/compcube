@@ -1,15 +1,15 @@
 app:
   env: local
   host: 0.0.0.0
-  port: 8082
+  port: 8001
   app_name: LadderCompetitionPlatform
-  app_url: http://127.0.0.1:8082
+  app_url: http://127.0.0.1:8001
 
 database:
   name: competition_for_debug
   host: mongodb://localhost:27017
   username: admin
-  password: 
+  password: 1234asdF
 
 file_path:
   root_path: ./data

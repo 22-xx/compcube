@@ -27,16 +27,14 @@ func Init(router *gin.Engine) {
 
 // @title Ladder Competition Platform
 // @version 1.0
-// @description ↑ ↑ ↓ ↓ ← → ← → B A
+// @description Backend service for the computing platform.
 // @termsOfService  http://swagger.io/terms/
-
 // @contact.name Ruizhe Ma
 // @contact.email ruizhe_ma@tju.edu.cn
-
-// @host 127.0.0.1:8000
+// @host 127.0.0.1:8001
 // @BasePath /
 func main() {
 	router := gin.Default()
 	Init(router)
-	router.Run(config.Config.App.Host + ":" + config.Config.App.Port) // 监听并在 0.0.0.0:8000 上启动服务
+	router.Run(config.Config.App.Host + ":" + config.Config.App.Port)
 }
