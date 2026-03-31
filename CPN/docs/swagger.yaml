@@ -1,0 +1,731 @@
+basePath: /
+definitions:
+  competition.Competition:
+    properties:
+      abstract:
+        type: string
+      author:
+        type: string
+      createTime:
+        type: string
+      dockerImage:
+        type: string
+      id:
+        type: string
+      isDelete:
+        type: boolean
+      latestTime:
+        type: string
+      sortOrder:
+        type: string
+      status:
+        type: string
+      timeLimit:
+        type: integer
+      title:
+        type: string
+    type: object
+  record.Record:
+    properties:
+      competitionID:
+        type: string
+      createTime:
+        type: string
+      error:
+        type: string
+      finishTime:
+        type: string
+      id:
+        type: string
+      isDelete:
+        type: boolean
+      latestTime:
+        type: string
+      runTime:
+        type: integer
+      score:
+        type: integer
+      status:
+        type: string
+      submission:
+        type: string
+      userID:
+        type: string
+    type: object
+  user.User:
+    properties:
+      createTime:
+        type: string
+      email:
+        type: string
+      id:
+        type: string
+      isDelete:
+        type: boolean
+      latestTime:
+        type: string
+      name:
+        type: string
+      password:
+        type: string
+      role:
+        type: string
+      school:
+        type: string
+      source:
+        type: string
+    type: object
+host: 127.0.0.1:8000
+info:
+  contact:
+    email: ruizhe_ma@tju.edu.cn
+    name: Ruizhe Ma
+  description: ↑ ↑ ↓ ↓ ← → ← → B A
+  termsOfService: http://swagger.io/terms/
+  title: Ladder Competition Platform
+  version: "1.0"
+paths:
+  /competition:
+    get:
+      parameters:
+      - default: 1
+        description: 页数
+        in: query
+        name: pageNum
+        type: integer
+      - default: 10
+        description: 每页数据条数
+        in: query
+        name: pageSize
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: success
+          schema:
+            additionalProperties: true
+            type: object
+      summary: 查询所有比赛信息
+      tags:
+      - Competition
+    post:
+      consumes:
+      - multipart/form-data
+      parameters:
+      - description: 比赛题目
+        in: formData
+        name: title
+        required: true
+        type: string
+      - description: 比赛简介（文档链接）
+        in: formData
+        name: abstract
+        required: true
+        type: string
+      - default: 降序
+        description: 成绩排序方式
+        enum:
+        - 升序
+        - 降序
+        in: formData
+        name: sortOrder
+        type: string
+      - default: "20"
+        description: 时间要求
+        in: formData
+        name: timeLimit
+        type: string
+      - description: 赛题docker镜像名
+        in: formData
+        name: dockerImage
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 赛题添加成功
+          schema:
+            additionalProperties: true
+            type: object
+        "500":
+          description: 赛题添加失败
+          schema:
+            additionalProperties: true
+            type: object
+      summary: 管理员创建新比赛
+      tags:
+      - Competition
+  /competition/{competitionID}:
+    delete:
+      parameters:
+      - description: 赛题ID
+        in: path
+        name: competitionID
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 赛题删除成功
+          schema:
+            additionalProperties: true
+            type: object
+        "500":
+          description: 赛题删除失败
+          schema:
+            additionalProperties: true
+            type: object
+      summary: 管理员删除赛题
+      tags:
+      - Competition
+    get:
+      parameters:
+      - description: 赛题ID
+        in: path
+        name: competitionID
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: success
+          schema:
+            $ref: '#/definitions/competition.Competition'
+        "500":
+          description: 该赛题不存在
+          schema:
+            additionalProperties: true
+            type: object
+      summary: 查询单个比赛详细信息
+      tags:
+      - Competition
+    put:
+      consumes:
+      - multipart/form-data
+      parameters:
+      - description: 赛题ID
+        in: path
+        name: competitionID
+        required: true
+        type: string
+      - description: 比赛题目
+        in: formData
+        name: title
+        type: string
+      - description: 比赛简介（文档链接）
+        in: formData
+        name: abstract
+        type: string
+      - description: 成绩排序方式
+        enum:
+        - 升序
+        - 降序
+        in: formData
+        name: sortOrder
+        type: string
+      - description: 时间要求
+        in: formData
+        name: timeLimit
+        type: string
+      - description: 赛题docker镜像名
+        in: formData
+        name: dockerImage
+        type: string
+      - description: 赛题状态
+        enum:
+        - 准备中
+        - 进行中
+        - 已结束
+        in: formData
+        name: status
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 赛题更新成功
+          schema:
+            additionalProperties: true
+            type: object
+        "500":
+          description: 赛题更新失败
+          schema:
+            additionalProperties: true
+            type: object
+      summary: 管理员修改比赛赛题
+      tags:
+      - Competition
+  /competition/{competitionID}/record:
+    get:
+      parameters:
+      - default: 1
+        description: 页数
+        in: query
+        name: pageNum
+        type: integer
+      - default: 10
+        description: 每页数据条数
+        in: query
+        name: pageSize
+        type: integer
+      - description: 赛题ID
+        in: path
+        name: competitionID
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: success
+          schema:
+            additionalProperties: true
+            type: object
+      summary: 查询某个赛题的提交排名
+      tags:
+      - Record
+    post:
+      consumes:
+      - multipart/form-data
+      parameters:
+      - description: 赛题ID
+        in: path
+        name: competitionID
+        required: true
+        type: string
+      - description: 提交文件
+        in: formData
+        name: submission
+        required: true
+        type: file
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 提交成功
+          schema:
+            additionalProperties: true
+            type: object
+        "500":
+          description: 提交失败
+          schema:
+            additionalProperties: true
+            type: object
+      summary: 进行一次提交
+      tags:
+      - Record
+  /competition/{competitionID}/record/{recordID}:
+    delete:
+      consumes:
+      - multipart/form-data
+      parameters:
+      - description: 赛题ID
+        in: path
+        name: competitionID
+        required: true
+        type: string
+      - description: 提交记录ID
+        in: path
+        name: recordID
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 该次提交删除成功
+          schema:
+            additionalProperties: true
+            type: object
+        "500":
+          description: 该次提交删除失败
+          schema:
+            additionalProperties: true
+            type: object
+      summary: 管理员删除提交记录
+      tags:
+      - Record
+    get:
+      parameters:
+      - description: 赛题ID
+        in: path
+        name: competitionID
+        required: true
+        type: string
+      - description: 提交记录ID
+        in: path
+        name: recordID
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: success
+          schema:
+            $ref: '#/definitions/record.Record'
+        "500":
+          description: 该次提交不存在
+          schema:
+            additionalProperties: true
+            type: object
+      summary: 查询单个提交
+      tags:
+      - Record
+    put:
+      consumes:
+      - multipart/form-data
+      parameters:
+      - description: 赛题ID
+        in: path
+        name: competitionID
+        required: true
+        type: string
+      - description: 提交记录ID
+        in: path
+        name: recordID
+        required: true
+        type: string
+      - description: 得分
+        in: formData
+        name: score
+        required: true
+        type: string
+      - description: 错误信息
+        in: formData
+        name: error
+        required: true
+        type: string
+      - description: 运行时间
+        in: formData
+        name: runTime
+        required: true
+        type: string
+      - description: 状态
+        in: formData
+        name: status
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 更新成功
+          schema:
+            additionalProperties: true
+            type: object
+        "500":
+          description: 更新失败
+          schema:
+            additionalProperties: true
+            type: object
+      summary: 赛题docker更新提交跑分结果
+      tags:
+      - Record
+  /files/{filename}:
+    get:
+      parameters:
+      - description: 文件名
+        in: path
+        name: filename
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              type: integer
+            type: array
+        "500":
+          description: 下载失败
+          schema:
+            additionalProperties: true
+            type: object
+      summary: 文件下载
+      tags:
+      - Files
+  /getInfo:
+    options:
+      consumes:
+      - multipart/form-data
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: success
+          schema:
+            additionalProperties: true
+            type: object
+      summary: 获取登录信息
+      tags:
+      - Login
+  /login:
+    post:
+      consumes:
+      - multipart/form-data
+      parameters:
+      - description: 用户名
+        in: formData
+        name: username
+        required: true
+        type: string
+      - description: 密码
+        in: formData
+        name: password
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: success
+          schema:
+            additionalProperties: true
+            type: object
+        "500":
+          description: 用户名密码错误
+          schema:
+            additionalProperties: true
+            type: object
+      summary: 登录
+      tags:
+      - Login
+  /record:
+    get:
+      parameters:
+      - default: 1
+        description: 页数
+        in: query
+        name: pageNum
+        type: integer
+      - default: 10
+        description: 每页数据条数
+        in: query
+        name: pageSize
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: success
+          schema:
+            additionalProperties: true
+            type: object
+      summary: 管理员查询所有提交记录，用户查询个人提交记录
+      tags:
+      - Record
+  /register:
+    post:
+      consumes:
+      - multipart/form-data
+      parameters:
+      - description: 用户名
+        in: formData
+        name: username
+        required: true
+        type: string
+      - description: 密码
+        in: formData
+        name: password
+        required: true
+        type: string
+      - description: 邮箱
+        in: formData
+        name: email
+        required: true
+        type: string
+      - description: 学校
+        in: formData
+        name: school
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 注册成功
+          schema:
+            additionalProperties: true
+            type: object
+        "500":
+          description: 注册失败
+          schema:
+            additionalProperties: true
+            type: object
+      summary: 注册
+      tags:
+      - Login
+  /user:
+    get:
+      parameters:
+      - default: 1
+        description: 页数
+        in: query
+        name: pageNum
+        type: integer
+      - default: 10
+        description: 每页数据条数
+        in: query
+        name: pageSize
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: success
+          schema:
+            additionalProperties: true
+            type: object
+      summary: 管理员查询所有用户信息
+      tags:
+      - User
+    post:
+      consumes:
+      - multipart/form-data
+      parameters:
+      - description: 用户名
+        in: formData
+        name: username
+        required: true
+        type: string
+      - description: 密码
+        in: formData
+        name: password
+        required: true
+        type: string
+      - default: user
+        description: 用户角色
+        enum:
+        - admin
+        - user
+        in: formData
+        name: role
+        type: string
+      - description: 邮箱
+        in: formData
+        name: email
+        required: true
+        type: string
+      - description: 学校
+        in: formData
+        name: school
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 用户添加成功
+          schema:
+            additionalProperties: true
+            type: object
+        "500":
+          description: 用户添加失败
+          schema:
+            additionalProperties: true
+            type: object
+      summary: 管理员新建用户
+      tags:
+      - User
+  /user/{userID}:
+    delete:
+      parameters:
+      - description: 用户ID(任意值)
+        in: path
+        name: userID
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 用户删除成功
+          schema:
+            additionalProperties: true
+            type: object
+        "500":
+          description: 用户删除失败
+          schema:
+            additionalProperties: true
+            type: object
+      summary: 管理员删除用户
+      tags:
+      - User
+    get:
+      parameters:
+      - description: 用户ID(任意值)
+        in: path
+        name: userID
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: success
+          schema:
+            $ref: '#/definitions/user.User'
+        "500":
+          description: 当前用户权限不足
+          schema:
+            additionalProperties: true
+            type: object
+      summary: 查询当前登录用户的详细信息
+      tags:
+      - User
+    put:
+      consumes:
+      - multipart/form-data
+      parameters:
+      - description: 用户ID(任意值)
+        in: path
+        name: userID
+        required: true
+        type: string
+      - description: 用户名
+        in: formData
+        name: username
+        type: string
+      - description: 密码
+        in: formData
+        name: password
+        type: string
+      - description: 用户角色
+        enum:
+        - admin
+        - user
+        in: formData
+        name: role
+        type: string
+      - description: 邮箱
+        in: formData
+        name: email
+        type: string
+      - description: 学校
+        in: formData
+        name: school
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 用户更新成功
+          schema:
+            additionalProperties: true
+            type: object
+        "500":
+          description: 用户更新失败
+          schema:
+            additionalProperties: true
+            type: object
+      summary: 修改个人信息
+      tags:
+      - User
+swagger: "2.0"

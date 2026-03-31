@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>超图可视化</title>
+  <style>
+    /* 在这里插入修改后的样式代码 */
+    .node {
+      fill: #ccc;
+      stroke: #fff;
+      stroke-width: 2px;
+    }
+
+    .node.highlight {
+      fill: yellow;
+    }
+
+    .link {
+      fill: none;
+      stroke: #999;
+      stroke-opacity: 0.6;
+    }
+
+    .link.highlight {
+      fill: none;
+      stroke: blue;
+      stroke-width: 3px;
+    }
+  </style>
+</head>
+<body>
+  <svg id="graph"></svg>
+
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script>
+    // 创建一个简单的节点数据和连接线数据
+    const nodes = [
+      { id: 1, degree: 3 },
+      { id: 2, degree: 2 },
+      { id: 3, degree: 1 }
+    ];
+
+    const links = [
+      { source: 1, target: 2 },
+      { source: 2, target: 3 }
+    ];
+
+    // 创建一个空的SVG元素
+    const svg = d3.select("#graph")
+      .attr("width", 400)
+      .attr("height", 200);
+
+    // 创建节点元素
+    const node = svg.selectAll(".node")
+      .data(nodes)
+      .enter()
+      .append("circle")
+      .attr("class", "node")
+      .attr("r", 10)
+      .attr("cx", (d, i) => 50 + i * 50)
+      .attr("cy", 100)
+      .style("fill", "red");
+
+    // 创建连接线元素
+    const link = svg.selectAll(".link")
+      .data(links)
+      .enter()
+      .append("line")
+      .attr("class", "link")
+      .attr("x1", (d) => 50 + (d.source - 1) * 50)
+      .attr("y1", 100)
+      .attr("x2", (d) => 50 + (d.target - 1) * 50)
+      .attr("y2", 100);
+
+    // 根据节点的度数为节点着色
+    const maxDegree = d3.max(nodes, (d) => d.degree);
+    const minDegree = d3.min(nodes, (d) => d.degree);
+
+    const colorScale = d3
+      .scaleLinear()
+      .domain([minDegree, maxDegree])
+      .range(["#ff0000", "#00ff00"]);
+
+    node.style("fill", (d) => colorScale(d.degree));
+
+    // 根据连接线的起始节点和目标节点的度数为连接线着色
+    link.style("stroke", (d) => (nodes[d.source - 1].degree > 0 && nodes[d.target - 1].degree > 0 ? "blue" : "#999"));
+  </script>
+</body>
+</html>

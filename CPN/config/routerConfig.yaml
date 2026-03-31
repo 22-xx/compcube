@@ -1,0 +1,112 @@
+- id: 0
+  host: "*"
+  path: "**"
+  method: "*"
+  authorized_roles:
+    - "*"
+  forbidden_roles: []
+  allow_anyone: true
+
+- id: 1
+  host: "*"
+  path: "/getInfo"
+  method: "{OPTIONS}"
+  authorized_roles:
+    - "admin"
+    - "user"
+  forbidden_roles: []
+  allow_anyone: false
+
+- id: 1
+  host: "*"
+  path: "/user**"
+  method: "{GET, POST, PUT, DELETE}"
+  authorized_roles:
+    - "admin"
+    - "user"
+  forbidden_roles: []
+  allow_anyone: false
+
+- id: 2
+  host: "*"
+  path: "/user"
+  method: "{GET, POST}"
+  authorized_roles:
+    - "admin"
+  forbidden_roles: []
+  allow_anyone: false
+
+- id: 2
+  host: "*"
+  path: "/user/*"
+  method: "{DELETE}"
+  authorized_roles:
+    - "admin"
+  forbidden_roles: []
+  allow_anyone: false
+
+- id: 1
+  host: "*"
+  path: "/competition**"
+  method: "{GET, POST, PUT, DELETE}"
+  authorized_roles:
+    - "admin"
+    - "user"
+  forbidden_roles: []
+  allow_anyone: false
+
+- id: 2
+  host: "*"
+  path: "/competition"
+  method: "{POST}"
+  authorized_roles:
+    - "admin"
+  forbidden_roles: []
+  allow_anyone: false
+
+- id: 2
+  host: "*"
+  path: "/competition/*"
+  method: "{PUT, DELETE}"
+  authorized_roles:
+    - "admin"
+  forbidden_roles: []
+  allow_anyone: false
+
+- id: 1
+  host: "*"
+  path: "/record"
+  method: "{GET}"
+  authorized_roles:
+    - "admin"
+    - "user"
+  forbidden_roles: []
+  allow_anyone: false
+
+- id: 2
+  host: "*"
+  path: "/competition/*/record/*"
+  method: "{PUT}"
+  authorized_roles:
+    - "docker"
+  forbidden_roles: []
+  allow_anyone: false
+
+- id: 2
+  host: "*"
+  path: "/competition/*/record/*"
+  method: "{DELETE}"
+  authorized_roles:
+    - "admin"
+  forbidden_roles: []
+  allow_anyone: false
+
+- id: 1
+  host: "*"
+  path: "/files"
+  method: "{GET}"
+  authorized_roles:
+    - "admin"
+    - "user"
+  forbidden_roles: []
+  allow_anyone: false
