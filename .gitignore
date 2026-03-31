@@ -23,3 +23,4 @@ CPN/*.docx
 __pycache__/
 */__pycache__/
 *.pyc
+CPN/data/

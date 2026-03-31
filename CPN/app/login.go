@@ -10,7 +10,9 @@ import (
 func LoginAppInit(router *gin.Engine) {
 	router.POST("/login", login)
 	router.POST("/register", register)
+	router.GET("/getInfo", getInfo)
 	router.OPTIONS("/getInfo", getInfo)
+	router.POST("/logout", logout)
 }
 
 // @Summary 登录
@@ -82,6 +84,21 @@ func register(context *gin.Context) {
 // @Success 200 {object} map[string]any "success"
 // @Router /getInfo [OPTIONS]
 func getInfo(context *gin.Context) {
-	currentUser := context.MustGet("currentUser").(user.User)
+	currentUserValue, exists := context.Get("currentUser")
+	if !exists {
+		context.JSON(401, utils.ErrorResponse(nil, "unauthorized"))
+		return
+	}
+	currentUser := currentUserValue.(user.User)
 	context.JSON(200, utils.SuccessResponse(currentUser.GetShortInfo()))
+}
+
+// @Summary 退出登录
+// @Tags Login
+// @Produce json
+// @Success 200 {object} map[string]any "success"
+// @Router /logout [post]
+func logout(context *gin.Context) {
+	context.SetCookie("LCP-Cookie", "", -1, "/", "", false, true)
+	context.JSON(200, utils.SuccessResponse("logout success"))
 }

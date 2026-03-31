@@ -1,18 +1,34 @@
-/**
- * 在生产环境 代理是无法生效的，所以这里没有生产环境的配置
- * -------------------------------
- * The agent cannot take effect in the production environment
- * so there is no configuration of the production environment
- * For details, please see
- * https://pro.ant.design/docs/deploy
- */
-export default {
-  dev: {
-    '/': {
-      target: 'http://127.0.0.1:8001',
-      changeOrigin: true,
+const localTarget = 'http://127.0.0.1:8001';
+
+const backendPaths = [
+  '/login',
+  '/logout',
+  '/register',
+  '/getInfo',
+  '/competition',
+  '/record',
+  '/user',
+  '/data',
+  '/model',
+  '/train',
+  '/files',
+  '/docs',
+];
+
+const buildLocalProxy = () =>
+  backendPaths.reduce<Record<string, { target: string; changeOrigin: boolean }>>(
+    (acc, path) => {
+      acc[path] = {
+        target: localTarget,
+        changeOrigin: true,
+      };
+      return acc;
     },
-  },
+    {},
+  );
+
+export default {
+  dev: buildLocalProxy(),
   test: {
     '/': {
       target: 'http://47.92.240.210:8099',
