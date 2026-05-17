@@ -4,9 +4,12 @@ import (
 	"os/exec"
 )
 
-func DockerManager(cmdString string) {
-	cmd := exec.Command(cmdString)
-	if err := cmd.Start(); err != nil { // 运行命令
-		Logger.Errorf("Cmd: %s\nError: %s", cmdString, err)
-	}
+func DockerManager(args []string) {
+	go func() {
+		cmd := exec.Command("docker", args...)
+		output, err := cmd.CombinedOutput()
+		if err != nil {
+			Logger.Errorf("Docker run failed: %s\nOutput: %s", err, string(output))
+		}
+	}()
 }

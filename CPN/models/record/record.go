@@ -64,14 +64,21 @@ func (record *Record) GetPath(folderName string) string {
 	return path.Join(config.Config.Path.RootPath, "user", record.UserID.Hex(), record.CompetitionID.Hex(), record.GetStringID(), folderName)
 }
 
-func (record *Record) GetDockerCmd() string {
+func (record *Record) GetDockerCmd() []string {
 	competition_, _ := competition.SelectOne(bson.M{"_id": record.CompetitionID})
-	return "docker run " +
-		"-v " + competition_.GetPath() + ":" + config.Config.Docker.InputPath + ":ro " +
-		"-v " + record.GetPath("userData") + ":" + config.Config.Docker.UserPath + " " +
-		"-v " + record.GetPath("output") + ":" + config.Config.Docker.OutputPath + " " +
-		"-v " + record.GetPath("logs") + ":" + config.Config.Docker.LogPath + " " +
-		competition_.DockerImage + " " + record.GetStringID() + " " + strconv.Itoa(competition_.TimeLimit) + " &"
+	answerPath := path.Join(config.Config.Path.RootPath, "competition", competition_.GetStringID(), "answer")
+	return []string{
+		"run", "--rm",
+		"-v", competition_.GetPath() + ":" + config.Config.Docker.InputPath + ":ro",
+		"-v", record.GetPath("userData") + ":" + config.Config.Docker.UserPath,
+		"-v", record.GetPath("output") + ":" + config.Config.Docker.OutputPath,
+		"-v", record.GetPath("logs") + ":" + config.Config.Docker.LogPath,
+		"-v", answerPath + ":/answer:ro",
+		competition_.DockerImage,
+		record.GetStringID(),
+		strconv.Itoa(competition_.TimeLimit),
+		competition_.GetStringID(),
+	}
 }
 
 func (record *Record) SetValue(

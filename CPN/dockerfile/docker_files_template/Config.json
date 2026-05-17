@@ -7,5 +7,5 @@
   "zip_path": "/opt/competition/unzip.sh",
   "judge_path": "/opt/competition/judge.py",
   "log_path": "/log/log.log",
-  "url": "http://172.29.214.135:8080/record/update"
+  "url": "http://127.0.0.1:8001"
 }

@@ -1,0 +1,1833 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<w:document
+  xmlns:wpc="http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+  xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+  xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math"
+  xmlns:v="urn:schemas-microsoft-com:vml"
+  xmlns:wp14="http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing"
+  xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing"
+  xmlns:w10="urn:schemas-microsoft-com:office:word"
+  xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"
+  xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml"
+  xmlns:wpg="http://schemas.microsoft.com/office/word/2010/wordprocessingGroup"
+  xmlns:wpi="http://schemas.microsoft.com/office/word/2010/wordprocessingInk"
+  xmlns:wne="http://schemas.microsoft.com/office/2006/wordml"
+  xmlns:wps="http://schemas.microsoft.com/office/word/2010/wordprocessingShape"
+  mc:Ignorable="w14 wp14">
+  <w:body>
+    
+    <w:p>
+      <w:pPr>
+        <w:jc w:val="center"/>
+        <w:spacing w:before="600" w:after="240" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:b/>
+          <w:sz w:val="36"/>
+          <w:szCs w:val="36"/>
+        </w:rPr>
+        <w:t xml:space="preserve">项目报告</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        <w:jc w:val="center"/>
+        <w:spacing w:before="0" w:after="240" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:b/>
+          <w:sz w:val="30"/>
+          <w:szCs w:val="30"/>
+        </w:rPr>
+        <w:t xml:space="preserve">算法竞赛与算力调度实验平台</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        <w:jc w:val="center"/>
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">项目类型：课程项目 / 综合实践项目</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        <w:jc w:val="center"/>
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">项目形式：五人团队协作开发</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        <w:jc w:val="center"/>
+        <w:spacing w:before="0" w:after="360" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="22"/>
+          <w:szCs w:val="22"/>
+        </w:rPr>
+        <w:t xml:space="preserve">文档说明：本报告基于项目代码结构、系统功能与团队协作过程整理形成，可作为课程结项、答辩汇报或项目归档材料使用。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:r>
+        <w:br w:type="page"/>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="120" w:after="180" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:b/>
+          <w:sz w:val="30"/>
+          <w:szCs w:val="30"/>
+        </w:rPr>
+        <w:t xml:space="preserve">一、项目背景介绍</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">随着人工智能、云计算、边缘计算和高性能计算技术的持续发展，算法实验、在线评测以及资源调度类研究逐渐从离线单机测试走向平台化、自动化和可重复化。传统的课程实验和算法竞赛通常依赖人工收集代码、手动部署运行环境、人工记录实验结果，不仅效率较低，而且容易出现环境不一致、数据丢失、过程不可追踪等问题。尤其是在涉及多数据中心调度、任务卸载、强化学习优化、能耗控制和服务等级协议约束等问题时，实验流程往往更加复杂，单纯依赖手工管理难以满足教学与科研的实际需要。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">在高校课程教学和科研训练场景中，教师和学生往往需要一个既能支持竞赛式代码提交、又能承载实验型算法验证的平台。一方面，平台需要提供用户管理、比赛管理、成绩排行、提交记录等基础竞赛功能；另一方面，平台还要具备隔离运行、自动评分、日志输出和结果回写能力，以便对算法效果进行系统评估。只有将这些能力整合到统一的平台中，才能真正提高实验效率，降低环境搭建成本，并保证实验结果的可复现性和可比较性。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">基于上述需求，我们开展了“算法竞赛与算力调度实验平台”项目的设计与实现。该项目面向课程设计、算法竞赛、资源调度研究和智能优化实验等场景，尝试构建一个从用户登录、比赛发布、代码提交、Docker 容器评测到结果展示的完整闭环。通过该项目，我们不仅完成了一个具有基本实用价值的原型系统，也在项目开发过程中深化了对前后端协同开发、数据库设计、权限控制、容器化部署和实验平台工程化实现的理解。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="180" w:after="180" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:b/>
+          <w:sz w:val="30"/>
+          <w:szCs w:val="30"/>
+        </w:rPr>
+        <w:t xml:space="preserve">二、项目概述</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">本项目是一个面向算法竞赛和算力调度实验的前后端分离平台。系统以“比赛”为核心组织单位，以“提交记录”为核心业务链路，实现了用户在平台内完成注册、登录、查看比赛、上传代码、查询评测结果、查看排行榜等操作。管理员则可以通过后台功能对用户信息和比赛信息进行维护，从而形成相对完整的平台运行机制。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">从仓库结构来看，项目主要由两个核心子系统组成。其一是后端服务模块 CPN，采用 Go 语言、Gin 框架和 MongoDB 数据库实现，主要负责业务逻辑、接口服务、数据持久化和权限控制。其二是前端系统 ithings-new-main，基于 Umi Max、React 和 Ant Design 开发，主要负责界面展示、交互逻辑和与后端的接口联调。除此之外，仓库中还包含 Docker 评测模板和多类实验脚本，用于支撑不同题目场景下的自动评测与算法验证。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">项目当前支持的核心业务流程为：用户访问前端页面并完成身份认证，前端通过代理请求访问后端接口；后端根据 Cookie 和权限配置校验用户身份；用户查看比赛列表并进入比赛详情页面后，可上传 zip 格式的代码提交包；系统创建提交记录并调用 Docker 容器执行评测逻辑；评测结束后，系统将得分、运行时间、错误信息和状态等结果写回数据库，最终在前端页面中展示提交详情和比赛排行榜。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="180" w:after="180" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:b/>
+          <w:sz w:val="30"/>
+          <w:szCs w:val="30"/>
+        </w:rPr>
+        <w:t xml:space="preserve">三、项目目标</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">本项目的主要目标包括以下几个方面：</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">1. 构建一个可运行的在线算法竞赛与实验平台原型，实现基本的用户、比赛和提交管理功能。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">2. 建立统一的代码提交与自动评测机制，减少人工运行和人工统计带来的时间成本。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">3. 通过 Docker 容器隔离运行环境，提高评测过程的稳定性、安全性和可复现性。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">4. 为多任务调度、资源分配和智能优化类实验提供平台基础，支持后续扩展更复杂的研究内容。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">5. 在团队协作过程中锻炼需求分析、系统设计、模块开发、联调测试和文档整理等综合工程能力。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="180" w:after="180" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:b/>
+          <w:sz w:val="30"/>
+          <w:szCs w:val="30"/>
+        </w:rPr>
+        <w:t xml:space="preserve">四、系统架构与技术路线</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">本项目采用典型的前后端分离架构。前端系统负责页面渲染与交互逻辑，后端系统负责业务处理与数据返回，MongoDB 用于持久化存储业务数据，Docker 用于执行隔离评测。整体技术路线具有结构清晰、职责分离明确、便于联调和后续扩展的特点。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">1. 前端技术路线</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">前端基于 React 生态构建，使用 Umi Max 作为项目框架，结合 Ant Design 与 ProComponents 完成页面布局、表单、表格、弹窗等组件开发。通过统一的服务层封装平台接口，实现了登录、比赛列表、比赛详情、记录查询、排行榜和管理员页面等业务功能。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">2. 后端技术路线</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">后端采用 Go 语言与 Gin 框架实现，按模块划分为登录、用户、比赛、记录、训练、数据、模型、静态文件和文档等部分。后端通过中间件完成请求日志记录、身份识别和路由鉴权，并通过统一的响应结构向前端返回业务数据。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">3. 数据存储方案</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">系统主要使用 MongoDB 保存用户信息、比赛信息和提交记录等核心数据。为了保证本地联调便利性，项目还设计了开发环境下的内存兜底机制，当 MongoDB 不可达时，系统可以切换为内存模式，使核心页面仍能够进行基础调试和流程验证。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">4. 自动评测方案</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">自动评测基于 Docker 容器实现。系统在用户提交代码后，为每次提交建立独立的记录目录，并根据比赛配置生成容器执行命令，将输入目录、用户代码目录、输出目录和日志目录映射到容器内部，再执行具体题目对应的评测脚本。容器完成运行后，由后端更新对应记录的成绩与状态。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">5. 工程支撑方案</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">项目还配套整理了运行说明、代理配置、启动方式和默认测试账号，使平台具备较好的本地启动和联调能力。这一点对于团队协作、代码交接和项目答辩展示都具有重要意义。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="180" w:after="180" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:b/>
+          <w:sz w:val="30"/>
+          <w:szCs w:val="30"/>
+        </w:rPr>
+        <w:t xml:space="preserve">五、系统功能模块介绍</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">根据当前代码实现情况，系统主要包含以下功能模块。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">1. 用户认证模块</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">系统支持用户注册、用户登录、获取当前用户信息和退出登录。注册时需要填写用户名、密码、邮箱和学校等信息；登录后系统会写入 Cookie，用于后续身份识别。前端在页面初始化时调用当前用户信息接口，根据登录状态和角色动态构建菜单。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">2. 用户管理模块</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">管理员可以查看用户列表、创建新用户、删除用户；普通用户可以访问个人中心页面查看或维护个人信息。该模块为系统的身份组织和后台维护提供了基本支撑。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">3. 比赛管理模块</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">平台支持比赛列表展示、比赛详情查看、比赛创建、比赛编辑和比赛删除。比赛包含标题、简介、作者、状态、时间限制、Docker 镜像等信息。管理员能够在前端通过弹窗表单直接完成比赛维护操作，普通用户则以浏览和参与比赛为主。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">4. 提交管理模块</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">用户可以在指定比赛页面上传 zip 格式代码包。提交后系统会自动创建提交记录，并在后端执行相关评测逻辑。前端提供拖拽上传界面，降低了操作门槛，也使整个提交流程更符合在线评测平台的使用习惯。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">5. 提交记录与排行榜模块</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">平台支持查看提交记录列表、查看单次提交详情以及查看某场比赛的排行榜。记录详情中能够展示比赛名称、提交用户、当前状态、得分、运行时间、错误信息、提交时间和完成时间等数据。排行榜则按比赛维度展示排名、得分和运行耗时，便于比较不同用户的算法结果。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">6. 权限控制模块</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">后端通过路由权限配置实现普通用户与管理员角色区分。不同角色在访问范围和操作能力上存在差异，例如管理员可以进入后台管理页面并维护比赛和用户，普通用户则主要参与比赛和查看个人记录。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">7. 文档与调试模块</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">项目提供了 Swagger 文档访问入口，便于接口调试与说明；同时提供了完整的 README 运行说明，包括端口配置、环境要求、启动步骤、代理规则和本地调试建议，为后续开发和展示提供了清晰指导。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="180" w:after="180" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:b/>
+          <w:sz w:val="30"/>
+          <w:szCs w:val="30"/>
+        </w:rPr>
+        <w:t xml:space="preserve">六、项目实施过程与已完成工作</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">在本项目实施过程中，我们不是简单完成单一功能，而是围绕“从需求到平台原型落地”的目标，逐步推进了架构设计、功能开发、联调测试、文档整理和团队协作等多个方面的工作。具体如下。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">1. 完成项目需求分析与平台定位</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">项目初期，我们首先围绕课程设计与算法实验场景进行了需求讨论，明确平台既不能只是普通的信息展示网站，也不能仅仅停留在静态比赛页面，而应当具备完整的竞赛流程闭环。基于这一共识，我们将平台定位为“算法竞赛与算力调度实验平台”，要求系统至少具备用户认证、比赛管理、代码提交、自动评测、记录展示和排行榜展示等功能。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">2. 完成前后端分离架构搭建</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">在明确平台功能边界后，我们完成了前后端项目基础结构的搭建。后端采用 Go + Gin + MongoDB 的组合，前端采用 Umi Max + React + Ant Design 的组合，并通过代理配置建立本地联调通道。该架构使得前端和后端能够相对独立开发，同时降低了接口对接和环境切换的复杂度。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">3. 完成后端核心接口开发</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">我们围绕用户、比赛和记录三条主线开发了后端接口。登录模块实现了注册、登录、获取用户信息和退出功能；比赛模块实现了比赛的增删改查；记录模块实现了提交记录查询、比赛排行榜查询、记录详情查询、记录创建、记录更新和记录删除等功能。这些接口共同支撑了平台最关键的业务流程。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">4. 完成身份认证与权限控制机制</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">为保证平台具备基本安全性和角色区分能力，我们实现了 Cookie 认证方案，并在请求中间件中完成当前登录用户解析。系统同时引入基于角色的路由权限控制机制，对普通用户和管理员的访问进行区分。这部分工作保证了前台用户流程与后台管理流程能够在同一平台中有序共存。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">5. 完成前端核心页面开发</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">在前端部分，我们完成了登录页、注册页、比赛列表页、比赛详情页、代码提交页、提交记录页、排行榜页、提交详情页、个人中心页以及管理员用户管理和比赛管理页面的开发。页面在结构上围绕平台核心业务组织，能够满足用户从登录到参加比赛再到查看结果的完整操作路径。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">6. 完成前后端接口联调</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">在接口联调过程中，我们将前端请求统一封装到 competitionPlatform 服务层中，对登录、比赛、记录和用户相关接口进行调用管理。通过代理配置，前端将开发环境中的业务请求转发到本地后端服务。这样既减少了跨域问题，也为调试和部署提供了便利。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">7. 完成自动评测调用链打通</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">平台最具代表性的工作之一是完成了用户提交到 Docker 评测的调用链打通。用户上传 zip 文件后，后端先校验比赛状态和文件格式，再创建提交记录和对应目录，随后根据比赛配置生成 Docker 命令，挂载输入、输出、日志和用户代码目录并执行容器。评测结果再通过记录更新接口写回平台。这个过程使项目从“管理系统”升级为真正具备评测能力的实验平台。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">8. 完成本地调试兜底机制</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">考虑到实际开发中数据库环境不一定始终可用，我们对后端连接逻辑进行了适配，当 MongoDB 无法连接时，系统可进入内存兜底模式。这一改进显著增强了项目的可调试性，使团队成员在环境尚未完全统一的情况下，仍然能够推进前后端联调和页面开发。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">9. 完成运行文档与项目说明整理</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">我们对项目 README 进行了较系统的整理，补充了项目结构说明、端口说明、环境要求、MongoDB 配置说明、启动步骤、本地登录方式、接口说明和常见问题排查建议。这项工作虽然不直接体现为页面或接口，但对项目可交接性、可维护性和答辩展示都有重要作用。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">10. 完成算法实验模板与题目环境准备</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">项目中包含 Docker 评测模板以及多个与资源调度、强化学习优化相关的脚本目录。这部分内容说明平台已具备承接具体实验题目的能力。我们围绕题目环境所需的 Config、解压脚本、限制脚本、评分脚本和 Dockerfile 模板进行整理，为后续扩展更多实验题目提供了基础。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="180" w:after="180" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:b/>
+          <w:sz w:val="30"/>
+          <w:szCs w:val="30"/>
+        </w:rPr>
+        <w:t xml:space="preserve">七、重点工作细化说明</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">1. 登录与用户体系建设</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">登录与用户体系是整个平台的入口。我们不仅完成了基本的注册和登录功能，还通过获取当前用户信息接口实现了前端页面的动态状态恢复。用户登录后，系统依据角色构建不同菜单，使管理员和普通用户看到的功能范围保持一致且清晰。该设计有效提升了用户体验，也保证了权限边界。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">2. 比赛全生命周期管理</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">比赛模块不只是简单的数据列表，而是平台核心业务的组织中心。我们围绕比赛建立了标题、简介、状态、时间限制、Docker 镜像等关键字段，使管理员能够配置评测环境和业务规则；同时通过列表页、详情页、提交入口和排行入口的联动，让用户围绕比赛完成完整操作。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">3. 提交记录可追踪化设计</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">每一次提交都被系统抽象为一条独立记录，包含用户、比赛、运行状态、得分、运行时间、错误信息和时间戳等字段。这样的设计使评测过程具备可追踪性。无论是调试问题、回看历史记录，还是形成排行榜，都以提交记录为依据，从而保证了数据的一致性和业务流程的闭环性。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">4. Docker 评测隔离机制</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">为了避免不同用户提交之间互相干扰，同时减少主机环境差异对结果的影响，我们采用 Docker 容器执行评测逻辑。容器隔离不仅提升了评测安全性，也使输入、输出和日志路径具有明确结构，便于后期扩展更严格的资源限制策略和更丰富的日志分析能力。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">5. 面向实验场景的扩展潜力</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">与普通在线判题平台相比，本项目更强调对算力调度与智能优化实验场景的支持。仓库中现有的实验脚本涉及资源分配、排队模型、SLA 约束、时间成本和能耗成本等内容，这说明平台具备进一步扩展为课程实验平台、科研验证平台甚至小规模竞赛平台的潜力。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="180" w:after="180" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:b/>
+          <w:sz w:val="30"/>
+          <w:szCs w:val="30"/>
+        </w:rPr>
+        <w:t xml:space="preserve">八、团队分工</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">本项目由五名成员共同完成。考虑到团队成员专业背景不同，我们在任务分配上强调“专业优势互补、模块协同推进、统一联调整合”的原则，使每位成员都能在擅长领域中发挥作用，同时共同完成系统整体落地。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">1. 软件工程专业成员 A</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">主要负责项目整体需求分析、前端页面结构设计与核心界面开发，重点参与登录注册、比赛列表、比赛详情、提交页面和记录展示页面的实现。同时参与前后端联调、页面交互优化和报告文档整理，承担了较多面向用户侧的系统落地工作。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">2. 软件工程专业成员 B</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">主要负责后端业务逻辑划分与接口开发，重点参与登录模块、比赛模块、记录模块、响应结构封装和运行文档整理等工作。同时协助推进项目整体进度，对前后端协作接口进行梳理，是项目工程组织和模块整合的重要参与者。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">3. 计算机科学与技术专业成员</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">主要负责系统核心逻辑支持与数据流程梳理，参与数据库相关结构理解、记录流程实现、业务链路验证和系统联调测试等工作。该成员在平台功能正确性验证、代码结构理解以及部分核心模块实现方面发挥了重要作用。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">4. 人工智能专业成员</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">主要负责算法实验内容与评测场景支持，参与资源调度、强化学习优化等题目场景分析，协助设计实验指标、输入输出规范和评测需求，使平台能够真正服务于智能优化与算法实验，而不仅仅是一个普通的信息管理系统。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">5. 网络安全专业成员</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">主要负责平台安全性相关工作，参与权限控制思路梳理、Cookie 认证流程理解、容器执行隔离风险分析以及文件上传和接口访问过程中的基础安全检查，为项目的角色边界清晰化和评测执行可靠性提供了支持。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">在团队协作过程中，我们采用分模块开发与集中联调相结合的方式推进工作。前期以各模块独立实现为主，中后期则通过统一接口、统一数据格式、统一测试流程进行整合。通过这种方式，我们在保证开发效率的同时，也较好地控制了系统整体一致性。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="180" w:after="180" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:b/>
+          <w:sz w:val="30"/>
+          <w:szCs w:val="30"/>
+        </w:rPr>
+        <w:t xml:space="preserve">九、项目成果与收获</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">1. 项目成果</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">目前项目已经形成一个可运行的原型系统，具备用户注册登录、比赛管理、代码提交、记录展示、排行榜查看和管理员后台管理等核心功能。平台的前后端联调链路清晰，后端具备基础权限控制与调试兜底能力，前端已形成可操作的完整业务页面。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">2. 团队能力提升</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">通过该项目，我们系统锻炼了需求分析、架构设计、前后端协作、数据库操作、接口联调、容器化思维、项目文档整理和团队分工协作等多方面能力。相比单人完成的小型练习项目，本次团队项目更强调工程组织和协同落地，对我们的综合实践能力提升明显。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">3. 对专业知识的深化理解</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">项目过程中，我们将课堂中学到的软件工程方法、Web 开发知识、数据库知识、人工智能实验场景理解和网络安全基础逐步转化为实际系统功能。成员们不仅完成了代码编写，也更加理解了跨专业协同开发在真实项目中的重要性。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="180" w:after="180" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:b/>
+          <w:sz w:val="30"/>
+          <w:szCs w:val="30"/>
+        </w:rPr>
+        <w:t xml:space="preserve">十、项目存在的问题与不足</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">虽然项目已经实现了较完整的平台雏形，但从工程完整性和实际应用性来看，仍存在一些可以继续完善的地方。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">1. 评测结果展示还可以进一步丰富，例如增加日志查看、输出文件下载和更细粒度的运行状态说明。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">2. 平台当前虽然具备 Docker 评测能力，但在资源限制、异常恢复和容器回收机制上仍可进一步强化。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">3. 管理员后台功能相对基础，后续可以增加比赛状态管理、批量审核、数据统计和操作日志等功能。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">4. 当前测试与验证更多集中在本地联调层面，后续还需要进一步补充更系统的接口测试、异常测试和压力测试。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">5. 某些页面和代码目录仍保留原模板内容，未来需要继续做业务聚焦和工程精简，以提高系统的一致性与可维护性。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="180" w:after="180" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:b/>
+          <w:sz w:val="30"/>
+          <w:szCs w:val="30"/>
+        </w:rPr>
+        <w:t xml:space="preserve">十一、后续优化方向</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">结合项目现状与未来可能的应用场景，我们认为后续可以从以下几个方面继续优化：</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">1. 完善评测链路，增加容器资源控制、日志管理、异常告警和结果可视化展示。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">2. 扩展比赛题目配置能力，使平台支持更多类型的算法实验和多样化评测规则。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">3. 优化前端页面体验，提升交互一致性、信息层次和用户操作便捷性。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">4. 引入更规范的测试与部署流程，例如接口自动测试、持续集成和部署脚本规范化。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">5. 深化与人工智能实验场景的结合，支持更多关于资源调度、任务卸载、强化学习和性能对比的实验题目。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="180" w:after="180" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:b/>
+          <w:sz w:val="30"/>
+          <w:szCs w:val="30"/>
+        </w:rPr>
+        <w:t xml:space="preserve">十二、项目总结</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">总体而言，本项目较为成功地完成了“算法竞赛与算力调度实验平台”原型系统的设计与实现。项目在功能上实现了用户、比赛、提交、记录和排行等核心模块，在技术上采用了前后端分离、MongoDB 数据存储和 Docker 容器化评测等较为合理的方案，在过程上也形成了较清晰的分工协作与联调整合机制。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">通过本次项目实践，我们不仅完成了一个可展示、可运行、可继续扩展的平台，也在真实团队协作中积累了宝贵经验。不同专业背景的成员从软件工程、系统实现、算法实验和安全保障等多个角度共同推进项目，使平台兼具工程实现与应用场景价值。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="0" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">未来，我们希望以本项目为基础，继续完善评测体系、丰富实验内容、优化管理后台、提升系统稳定性和可维护性，使平台能够更好地服务于课程教学、算法竞赛和科研训练等多种场景。</w:t>
+      </w:r>
+    </w:p>
+
+    <w:p>
+      <w:pPr>
+        
+        <w:spacing w:before="240" w:after="120" w:line="360" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          
+          <w:sz w:val="22"/>
+          <w:szCs w:val="22"/>
+        </w:rPr>
+        <w:t xml:space="preserve">附注：本报告内容已根据项目代码结构、功能模块、README 文档与现有实现进行细化整理，可继续用于答辩 PPT、结题材料或课程设计说明书的扩展。</w:t>
+      </w:r>
+    </w:p>
+    <w:sectPr>
+      <w:pgSz w:w="11906" w:h="16838"/>
+      <w:pgMar w:top="1440" w:right="1440" w:bottom="1440" w:left="1440" w:header="720" w:footer="720" w:gutter="0"/>
+      <w:cols w:space="720"/>
+      <w:docGrid w:linePitch="360"/>
+    </w:sectPr>
+  </w:body>
+</w:document>

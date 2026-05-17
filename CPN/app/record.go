@@ -9,6 +9,7 @@ import (
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"os"
+	"path/filepath"
 	"strconv"
 	"strings"
 )
@@ -182,14 +183,18 @@ func recordCreate(context *gin.Context) {
 
 	if record.InsertOne(*newRecord) {
 		filePath := newRecord.GetPath("userData")
-		_, err := os.Stat(filePath)
-		if err != nil {
-			if os.IsNotExist(err) {
-				errDir := os.MkdirAll(filePath, 0755)
-				if errDir != nil {
-					utils.Logger.Errorf("创建文件夹: %s\nError: %s", filePath, errDir)
-				}
-			}
+		if err := os.MkdirAll(filePath, 0755); err != nil {
+			utils.Logger.Errorf("创建文件夹: %s\nError: %s", filePath, err)
+			context.JSON(500, utils.ErrorResponse(nil, "创建目录失败"))
+			return
+		}
+
+		// 保存上传的 zip 文件到 userData 目录
+		zipPath := filepath.Join(filePath, "code.zip")
+		if err := context.SaveUploadedFile(submission, zipPath); err != nil {
+			utils.Logger.Errorf("保存上传文件失败: %s", err)
+			context.JSON(500, utils.ErrorResponse(nil, "文件保存失败"))
+			return
 		}
 
 		context.JSON(200, utils.SuccessResponse("提交成功"))
